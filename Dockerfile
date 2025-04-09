@@ -146,6 +146,15 @@ ENV PATH="/usr/local/bin:${PATH}"
 # Copy fonts into the custom fonts directory
 COPY ./fonts /usr/share/fonts/custom
 
+# Set environment variables for S3 and API key
+ENV API_KEY=berry007
+ENV S3_ENDPOINT_URL=https://bucket.sbcsltd.uk:9001
+ENV S3_ACCESS_KEY=8U76BnQQBs3XKaz8JOc0
+ENV S3_SECRET_KEY=8BHZsbubaLO7zo3qaC2ZP8FaovejT8HgFVjLCnjd
+ENV S3_BUCKET_NAME=nca-toolkit
+ENV S3_REGION=None
+
+
 # Rebuild the font cache so that fontconfig can see the custom fonts
 RUN fc-cache -f -v
 
