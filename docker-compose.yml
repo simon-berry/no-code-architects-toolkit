@@ -1,0 +1,14 @@
+services:
+  nca-toolkit:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: nca-toolkit
+    ports:
+      - "8080:8080"
+    networks:
+      - proxy_default
+
+networks:
+  proxy_default:
+    external: true
